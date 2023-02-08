@@ -11,6 +11,26 @@
       "username": "user2",
       "email": "user2@example.com",
       "password": "password2"
+    },
+    {
+      "username": "richa199262",
+      "email": "laiskasrichardui@gmail.com",
+      "password": "ggggggggggggg",
+      "id": 3
+    },
+    {
+      "username": "",
+      "email": "laiskasrichardui@gmail.com",
+      "password": "",
+      "confirmPassword": "",
+      "id": 4
+    },
+    {
+      "username": "useris",
+      "email": "useris@gmail.com",
+      "password": "1234",
+      "confirmPassword": "1234",
+      "id": 5
     }
   ],
   "posts": [

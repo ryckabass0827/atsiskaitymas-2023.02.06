@@ -6,9 +6,10 @@ const AuthContext = React.createContext({
 });
 
 const AuthContextProvider = (props) => {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('token'));
 
     const loginHandler = () => {
+        localStorage.setItem('token', 'your-token-here');
         setIsAuthenticated(true);
     };
 
