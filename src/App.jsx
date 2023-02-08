@@ -1,10 +1,11 @@
 import './App.css';
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register';
-import Home from './components/Home';
+import WelcomePage from './components/WelcomePage';
 import { AuthContext } from "./context/AuthContext";
+import Home from "./components/Home"
 
 
 function App() {
@@ -14,13 +15,15 @@ function App() {
   });
   return (
     <AuthContext.Provider value={{ auth, setAuth }}>
-      <Router>
+      <BrowserRouter>
         <Routes>
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-          <Route path="/" component={Home} />
+          <Route exact path="/" element={<WelcomePage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/home" element={<Home />} exact />
         </Routes>
-      </Router>
+
+      </BrowserRouter>
     </AuthContext.Provider>
   );
 }
